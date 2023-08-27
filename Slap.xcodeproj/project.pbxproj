@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84395B8E2A9B752000B2691D /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84395B8D2A9B752000B2691D /* Clock.swift */; };
+		84395B902A9B897A00B2691D /* InitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84395B8F2A9B897A00B2691D /* InitView.swift */; };
 		84926A472A955EED0069FBCA /* SlapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84926A462A955EED0069FBCA /* SlapApp.swift */; };
 		84926A492A955EED0069FBCA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84926A482A955EED0069FBCA /* ContentView.swift */; };
 		84926A4B2A955EEF0069FBCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84926A4A2A955EEF0069FBCA /* Assets.xcassets */; };
 		84926A4E2A955EEF0069FBCA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84926A4D2A955EEF0069FBCA /* Preview Assets.xcassets */; };
+		84DCA47B2A96A91100CAEFD4 /* BPMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DCA47A2A96A91100CAEFD4 /* BPMView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		84926A432A955EED0069FBCA /* Slap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84395B8D2A9B752000B2691D /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		84395B8F2A9B897A00B2691D /* InitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitView.swift; sourceTree = "<group>"; };
+		84926A432A955EED0069FBCA /* Slap | Tap Tempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slap | Tap Tempo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84926A462A955EED0069FBCA /* SlapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapApp.swift; sourceTree = "<group>"; };
 		84926A482A955EED0069FBCA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		84926A4A2A955EEF0069FBCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84926A4D2A955EEF0069FBCA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		84DCA47A2A96A91100CAEFD4 /* BPMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +49,7 @@
 		84926A442A955EED0069FBCA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84926A432A955EED0069FBCA /* Slap.app */,
+				84926A432A955EED0069FBCA /* Slap | Tap Tempo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,6 +59,9 @@
 			children = (
 				84926A462A955EED0069FBCA /* SlapApp.swift */,
 				84926A482A955EED0069FBCA /* ContentView.swift */,
+				84395B8F2A9B897A00B2691D /* InitView.swift */,
+				84DCA47A2A96A91100CAEFD4 /* BPMView.swift */,
+				84395B8D2A9B752000B2691D /* Clock.swift */,
 				84926A4A2A955EEF0069FBCA /* Assets.xcassets */,
 				84926A4C2A955EEF0069FBCA /* Preview Content */,
 			);
@@ -84,7 +93,7 @@
 			);
 			name = Slap;
 			productName = Slap;
-			productReference = 84926A432A955EED0069FBCA /* Slap.app */;
+			productReference = 84926A432A955EED0069FBCA /* Slap | Tap Tempo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -138,6 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				84926A492A955EED0069FBCA /* ContentView.swift in Sources */,
+				84395B902A9B897A00B2691D /* InitView.swift in Sources */,
+				84DCA47B2A96A91100CAEFD4 /* BPMView.swift in Sources */,
+				84395B8E2A9B752000B2691D /* Clock.swift in Sources */,
 				84926A472A955EED0069FBCA /* SlapApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +282,8 @@
 				DEVELOPMENT_TEAM = 65LE28YDNU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Slap;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -281,7 +295,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gilleswittenberg.Slap;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Slap | Tap Tempo";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -299,6 +313,8 @@
 				DEVELOPMENT_TEAM = 65LE28YDNU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Slap;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -310,7 +326,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gilleswittenberg.Slap;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Slap | Tap Tempo";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
