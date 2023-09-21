@@ -50,11 +50,19 @@ class Clock: ObservableObject {
     }
     
     private var taps: [SuspendingClock.Instant] = []
+    private var timer: Timer?
     
     func appendTap () {
         taps.append(clock.now)
         BPM = calculateBPM(taps)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.1) {
+        scheduleTimer()
+    }
+    
+    private func scheduleTimer () {
+        if let timer = timer {
+            timer.invalidate()
+        }
+        timer = Timer.scheduledTimer(withTimeInterval: 3.1, repeats: false) { timer in
             self.clear(false)
         }
     }
