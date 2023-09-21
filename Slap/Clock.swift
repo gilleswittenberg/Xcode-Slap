@@ -58,20 +58,20 @@ class Clock: ObservableObject {
         scheduleTimer()
     }
     
+    func clear (_ clearBPM: Bool = true) {
+        _clock = nil
+        taps = []
+        if clearBPM {
+            BPM = nil
+        }
+    }
+    
     private func scheduleTimer () {
         if let timer = timer {
             timer.invalidate()
         }
         timer = Timer.scheduledTimer(withTimeInterval: 3.1, repeats: false) { timer in
             self.clear(false)
-        }
-    }
-    
-    func clear (_ clearBPM: Bool = true) {
-        _clock = nil
-        taps = []
-        if clearBPM {
-            BPM = nil
         }
     }
 }
