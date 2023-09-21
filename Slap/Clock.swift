@@ -54,11 +54,16 @@ class Clock: ObservableObject {
     func appendTap () {
         taps.append(clock.now)
         BPM = calculateBPM(taps)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.1) {
+            self.clear(false)
+        }
     }
     
-    func clear () {
+    func clear (_ clearBPM: Bool = true) {
         _clock = nil
         taps = []
-        BPM = nil
+        if clearBPM {
+            BPM = nil
+        }
     }
 }

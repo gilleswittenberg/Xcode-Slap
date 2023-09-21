@@ -58,10 +58,10 @@
 			isa = PBXGroup;
 			children = (
 				84926A462A955EED0069FBCA /* SlapApp.swift */,
+				84395B8D2A9B752000B2691D /* Clock.swift */,
 				84926A482A955EED0069FBCA /* ContentView.swift */,
 				84395B8F2A9B897A00B2691D /* InitView.swift */,
 				84DCA47A2A96A91100CAEFD4 /* BPMView.swift */,
-				84395B8D2A9B752000B2691D /* Clock.swift */,
 				84926A4A2A955EEF0069FBCA /* Assets.xcassets */,
 				84926A4C2A955EEF0069FBCA /* Preview Content */,
 			);
