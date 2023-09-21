@@ -12,19 +12,7 @@ struct InitView: View {
     var numTaps = 0
     
     var body: some View {
-        VStack {
-            Text("🪘")
-                .font(
-                    .system(size: 96)
-                )
-                .foregroundColor(Color.accentColor)
-            Text(numTaps > 0 ? "again" : "tap")
-                .font(
-                    .system(size: 18, design: .monospaced)
-                    .weight(.bold)
-                )
-                .foregroundColor(Color.accentColor)
-        }
+        TextView(header: "🪘", text: numTaps > 0 ? "again" : "tap")
     }
 }
 

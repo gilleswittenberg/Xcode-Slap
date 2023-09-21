@@ -25,13 +25,14 @@ struct ContentView: View {
                 Spacer()
             } else {
                 InitView(numTaps: clock.numTaps)
-                    .padding()
+                    .padding(.top, 164)
                     .transition(
                         .asymmetric(
                             insertion: AnyTransition.opacity.animation(.easeOut(duration: 0.4)),
                             removal: .identity
                         )
                     )
+                Spacer()
             }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)

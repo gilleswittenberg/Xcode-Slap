@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84003AAB2ABC708D00F553B9 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84003AAA2ABC708D00F553B9 /* TextView.swift */; };
 		84395B8E2A9B752000B2691D /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84395B8D2A9B752000B2691D /* Clock.swift */; };
 		84395B902A9B897A00B2691D /* InitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84395B8F2A9B897A00B2691D /* InitView.swift */; };
 		84926A472A955EED0069FBCA /* SlapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84926A462A955EED0069FBCA /* SlapApp.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84003AAA2ABC708D00F553B9 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		84395B8D2A9B752000B2691D /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		84395B8F2A9B897A00B2691D /* InitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitView.swift; sourceTree = "<group>"; };
 		84926A432A955EED0069FBCA /* Slap | Tap Tempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slap | Tap Tempo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +64,7 @@
 				84926A482A955EED0069FBCA /* ContentView.swift */,
 				84395B8F2A9B897A00B2691D /* InitView.swift */,
 				84DCA47A2A96A91100CAEFD4 /* BPMView.swift */,
+				84003AAA2ABC708D00F553B9 /* TextView.swift */,
 				84926A4A2A955EEF0069FBCA /* Assets.xcassets */,
 				84926A4C2A955EEF0069FBCA /* Preview Content */,
 			);
@@ -149,6 +152,7 @@
 				84926A492A955EED0069FBCA /* ContentView.swift in Sources */,
 				84395B902A9B897A00B2691D /* InitView.swift in Sources */,
 				84DCA47B2A96A91100CAEFD4 /* BPMView.swift in Sources */,
+				84003AAB2ABC708D00F553B9 /* TextView.swift in Sources */,
 				84395B8E2A9B752000B2691D /* Clock.swift in Sources */,
 				84926A472A955EED0069FBCA /* SlapApp.swift in Sources */,
 			);

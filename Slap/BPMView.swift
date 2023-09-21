@@ -8,22 +8,11 @@
 import SwiftUI
 
 struct BPMView: View {
+    
     var bpm: Int
+    
     var body: some View {
-        VStack {
-            Text("\(bpm)")
-                .font(
-                    .system(size: 96, design: .monospaced)
-                    .weight(.bold)
-                )
-                .foregroundColor(Color.accentColor)
-            Text("BPM")
-                .font(
-                    .system(size: 24, design: .monospaced)
-                    .weight(.bold)
-                )
-                .foregroundColor(Color.accentColor)
-        }
+        TextView(header: "\(bpm)", text: "BPM")
     }
 }
 
