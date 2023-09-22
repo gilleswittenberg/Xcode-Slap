@@ -11,22 +11,14 @@ fileprivate enum AverageAlgorithm {
     case instant, average, weighted
 }
 
-fileprivate func averageDuration (_ durations: [Duration]) -> Duration {
-    let sum = durations.reduce(.seconds(0), +)
-    return sum / durations.count
-}
-
-fileprivate func averageWeightedDuration (_ durations: [Duration]) -> Duration {
-    let sum = durations.enumerated().reduce(Duration.seconds(0), { (accumulate, current) in
+fileprivate func averageWeightedDuration (_ durations: [Duration], weight: Double = 1.0) -> Duration {
+    let (sum, denominator) = durations.enumerated().reduce((Duration.seconds(0), 0), { (accumulate, current) in
         let index = current.0
         let value = current.1
-        let multiplier: Double = 1 + Double(index) * 0.2
-        return accumulate + value * multiplier
-    })
-    let denominator = durations.enumerated().reduce(0, { (accumulate, current) in
-        let index = current.0
-        let multiplier = 1 + Double(index) * 0.2
-        return accumulate + multiplier
+        let multiplier = pow(weight, Double(index))
+        let sum = accumulate.0 + value * multiplier
+        let denominator = accumulate.1 + multiplier
+        return (sum, denominator)
     })
     return sum / denominator
 }
@@ -34,11 +26,11 @@ fileprivate func averageWeightedDuration (_ durations: [Duration]) -> Duration {
 fileprivate func calculateAverageDuration (_ durations: [Duration], _ algorithm: AverageAlgorithm) -> Duration {
     switch algorithm {
     case .instant:
-        return averageDuration(durations)
-    case .average:
-        return averageDuration(durations)
-    case .weighted:
         return averageWeightedDuration(durations)
+    case .average:
+        return averageWeightedDuration(durations)
+    case .weighted:
+        return averageWeightedDuration(durations, weight: 1.1)
     }
 }
 
@@ -72,7 +64,7 @@ fileprivate func calculateBPM (_ allTaps: [SuspendingClock.Instant], algorithm: 
     let taps = lastTaps(allTaps, algorithm)
     let durations = filterDurations(diffClockInstants(taps))
     guard durations.isEmpty == false else { return nil }
-    let d = averageDuration(durations)
+    let d = calculateAverageDuration(durations, algorithm)
     guard d > .seconds(0) else { return nil }
     return .seconds(60) / d
 }
