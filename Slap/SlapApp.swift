@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct SlapApp: App {
+    
+    @AppStorage("DISPLAY_SETTINGS") private var displaySettings = true
+    @AppStorage("AVERAGING_ALGORITHM") private var averagingAlgorithm = AverageAlgorithm.default
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(
+                displaySettings: displaySettings,
+                averagingAlgorithm: averagingAlgorithm
+            )
         }
     }
 }

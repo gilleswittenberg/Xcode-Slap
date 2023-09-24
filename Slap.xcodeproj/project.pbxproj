@@ -10,6 +10,8 @@
 		84003AAB2ABC708D00F553B9 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84003AAA2ABC708D00F553B9 /* TextView.swift */; };
 		84395B8E2A9B752000B2691D /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84395B8D2A9B752000B2691D /* Clock.swift */; };
 		84395B902A9B897A00B2691D /* InitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84395B8F2A9B897A00B2691D /* InitView.swift */; };
+		846165CA2ABEE29D00351458 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 846165C92ABEE29D00351458 /* Settings.bundle */; };
+		846165CE2AC0741E00351458 /* AverageAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846165CD2AC0741E00351458 /* AverageAlgorithm.swift */; };
 		84926A472A955EED0069FBCA /* SlapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84926A462A955EED0069FBCA /* SlapApp.swift */; };
 		84926A492A955EED0069FBCA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84926A482A955EED0069FBCA /* ContentView.swift */; };
 		84926A4B2A955EEF0069FBCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84926A4A2A955EEF0069FBCA /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 		84003AAA2ABC708D00F553B9 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		84395B8D2A9B752000B2691D /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		84395B8F2A9B897A00B2691D /* InitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitView.swift; sourceTree = "<group>"; };
+		846165C92ABEE29D00351458 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		846165CD2AC0741E00351458 /* AverageAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageAlgorithm.swift; sourceTree = "<group>"; };
 		84926A432A955EED0069FBCA /* Slap | Tap Tempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slap | Tap Tempo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84926A462A955EED0069FBCA /* SlapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapApp.swift; sourceTree = "<group>"; };
 		84926A482A955EED0069FBCA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +44,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		846165CB2AC073CB00351458 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				84395B8D2A9B752000B2691D /* Clock.swift */,
+				846165CD2AC0741E00351458 /* AverageAlgorithm.swift */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		846165CC2AC073DB00351458 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				84926A482A955EED0069FBCA /* ContentView.swift */,
+				84395B8F2A9B897A00B2691D /* InitView.swift */,
+				84DCA47A2A96A91100CAEFD4 /* BPMView.swift */,
+				84003AAA2ABC708D00F553B9 /* TextView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		84926A3A2A955EED0069FBCA = {
 			isa = PBXGroup;
 			children = (
@@ -60,11 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				84926A462A955EED0069FBCA /* SlapApp.swift */,
-				84395B8D2A9B752000B2691D /* Clock.swift */,
-				84926A482A955EED0069FBCA /* ContentView.swift */,
-				84395B8F2A9B897A00B2691D /* InitView.swift */,
-				84DCA47A2A96A91100CAEFD4 /* BPMView.swift */,
-				84003AAA2ABC708D00F553B9 /* TextView.swift */,
+				846165CC2AC073DB00351458 /* views */,
+				846165CB2AC073CB00351458 /* lib */,
+				846165C92ABEE29D00351458 /* Settings.bundle */,
 				84926A4A2A955EEF0069FBCA /* Assets.xcassets */,
 				84926A4C2A955EEF0069FBCA /* Preview Content */,
 			);
@@ -138,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84926A4E2A955EEF0069FBCA /* Preview Assets.xcassets in Resources */,
+				846165CA2ABEE29D00351458 /* Settings.bundle in Resources */,
 				84926A4B2A955EEF0069FBCA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +175,7 @@
 				84926A492A955EED0069FBCA /* ContentView.swift in Sources */,
 				84395B902A9B897A00B2691D /* InitView.swift in Sources */,
 				84DCA47B2A96A91100CAEFD4 /* BPMView.swift in Sources */,
+				846165CE2AC0741E00351458 /* AverageAlgorithm.swift in Sources */,
 				84003AAB2ABC708D00F553B9 /* TextView.swift in Sources */,
 				84395B8E2A9B752000B2691D /* Clock.swift in Sources */,
 				84926A472A955EED0069FBCA /* SlapApp.swift in Sources */,

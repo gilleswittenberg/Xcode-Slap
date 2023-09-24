@@ -7,10 +7,6 @@
 
 import Foundation
 
-fileprivate enum AverageAlgorithm {
-    case instant, average, weighted
-}
-
 fileprivate func averageWeightedDuration (_ durations: [Duration], weight: Double = 1.0) -> Duration {
     let (sum, denominator) = durations.enumerated().reduce((Duration.seconds(0), 0), { (accumulate, current) in
         let index = current.0
@@ -83,10 +79,9 @@ class Clock: ObservableObject {
     }
     
     private var taps: [SuspendingClock.Instant] = []
-    private var algorithm = AverageAlgorithm.weighted
     private var timer: Timer?
     
-    func appendTap () {
+    func appendTap (algorithm: AverageAlgorithm) {
         taps.append(clock.now)
         BPM = calculateBPM(taps, algorithm: algorithm)
         scheduleTimer()
