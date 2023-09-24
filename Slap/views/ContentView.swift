@@ -22,7 +22,7 @@ struct ContentView: View {
                     .transition(
                         .asymmetric(
                             insertion: .identity,
-                            removal: AnyTransition.opacity.animation(.easeOut(duration: 0.2))
+                            removal: AnyTransition.opacity.animation(.easeOut(duration: 0.1))
                         )
                     )
             } else {
@@ -30,7 +30,7 @@ struct ContentView: View {
                     .padding(.top, 164)
                     .transition(
                         .asymmetric(
-                            insertion: AnyTransition.opacity.animation(.easeOut(duration: 0.4)),
+                            insertion: AnyTransition.opacity.animation(.easeOut(duration: 0.2)),
                             removal: .identity
                         )
                     )
