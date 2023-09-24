@@ -2,8 +2,7 @@
 
 ## To Do
 
-- Settings, Button to Settings + show/hide button
-- different average algorithms (https://gigperformer.com/docs_4_7/GP47UserManualOnline/tap-tempo-options.html)
+- More screenshots
 - Apple Watch
 - Interactive Widget
 - correct to within range
