@@ -2,6 +2,7 @@
 
 ## To Do
 
+- Register start of tap
 - More screenshots
 - Apple Watch
 - Interactive Widget
